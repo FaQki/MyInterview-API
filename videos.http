@@ -1,0 +1,36 @@
+@api=http://localhost:3000
+
+GET {{api}}/videos
+
+###
+
+GET {{api}}/videos/647f9b5a5a8fc7446bc75be3
+
+###
+
+DELETE  {{api}}/videos/64814ac35d3ca0845864a57d
+
+###
+
+POST {{api}}/videos
+Content-Type: application/json
+
+{
+    "url": "https://www.youtube.com/watch?v=hSLJBcA24-Y",
+    "title": "Video numero 20",
+    "description": "sdsdas"
+
+}
+
+###
+
+DELETE {{api}}/videos/647fa5548b84b33fc4568fac
+###
+
+PUT  {{api}}/videos/123
+Content-Type: application/json
+
+{
+    "title": "203"
+    
+}
