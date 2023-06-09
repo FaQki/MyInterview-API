@@ -6,9 +6,6 @@ GET {{api}}/videos
 
 GET {{api}}/videos/647f9b5a5a8fc7446bc75be3
 
-###
-
-DELETE  {{api}}/videos/64814ac35d3ca0845864a57d
 
 ###
 
@@ -34,3 +31,69 @@ Content-Type: application/json
     "title": "203"
     
 }
+
+### ACA PARA PROBAR LOS USER
+
+###
+
+POST {{api}}/api/user
+Content-Type: application/json
+
+{
+"username": "Facundo Angelico",
+
+"email": "facuang@outlook.com",
+    
+
+"password": "facu:)",
+
+
+
+    
+
+}
+###
+
+
+GET {{api}}/api/user
+
+###
+
+GET {{api}}/api/user/:id
+
+###
+
+DELETE  {{api}}/api/user/64828fdf899cce975c3896b4
+
+###
+
+PUT  {{api}}/api/user/123
+Content-Type: application/json
+
+{
+    "name": "203"
+    
+}
+
+### PARA LAS AUTENTICACIONES registro y inicio de session
+
+
+POST {{api}}/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "Valentina",
+    "email": "vale@outlook.com",
+    "password": "vale123",
+    "roles": ["admin","user"]
+}
+###
+
+POST {{api}}/api/auth/signin
+Content-Type: application/json
+
+{
+    "email": "vale@outlook.com",
+    "password": "vale123"
+}
+###
