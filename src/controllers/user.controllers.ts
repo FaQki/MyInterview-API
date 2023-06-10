@@ -13,9 +13,9 @@ export const getUser:RequestHandler = async (req, res) => {
 }
 
 export const createUser:RequestHandler = async (req, res) => {
-    const UserFound = await user.findOne({url: req.body.url})
+    const UserFound = await user.findOne({email: req.body.email})
     if (UserFound){
-        return res.status(301).json({message: 'The URL already exists'})
+        return res.status(301).json({message: 'The email already exists'})
     }
     const User = new user(req.body)
     const savedUser = await User.save();

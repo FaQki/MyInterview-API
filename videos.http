@@ -11,9 +11,10 @@ GET {{api}}/videos/647f9b5a5a8fc7446bc75be3
 
 POST {{api}}/videos
 Content-Type: application/json
+Authorization: token
 
 {
-    "url": "https://www.youtube.com/watch?v=hSLJBcA24-Y",
+    "url": "https://www.youtube.com/watch?v=4lV7mxivGX_I&t=42758s",
     "title": "Video numero 20",
     "description": "sdsdas"
 
@@ -82,8 +83,8 @@ POST {{api}}/api/auth/signup
 Content-Type: application/json
 
 {
-    "username": "Valentina",
-    "email": "vale@outlook.com",
+    "username": "Zeta",
+    "email": "zeta@outlook.com",
     "password": "vale123",
     "roles": ["admin","user"]
 }

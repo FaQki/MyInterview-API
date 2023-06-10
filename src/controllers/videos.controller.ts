@@ -1,5 +1,5 @@
 import {RequestHandler} from 'express'
-import Video from './videos'
+import Video from '../models/videos'
 const mongoose = require('mongoose')
 
 export const getVideos:RequestHandler = async (req, res) => {
