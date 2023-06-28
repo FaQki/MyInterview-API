@@ -3,9 +3,21 @@ import bcrypt from "bcryptjs";
 
 const userSchema = new Schema(
   {
-    username: {
+    firstName: {
       type: String,
-      require: true,
+      required: true,
+      trim: true,
+      unique: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+      trim: true,
+      unique: true,
+    },
+    profilePicture: {
+      type: String,
+      required: false,
       trim: true,
       unique: true,
     },
@@ -16,13 +28,18 @@ const userSchema = new Schema(
     },
     password: {
       type: String,
-      require: true,
+      required: true,
       trim: true,
-      
     },
     roles: [
       {
         ref: "Rol",
+        type: Schema.Types.ObjectId,
+      },
+    ],
+    videos: [
+      {
+        ref: "Video",
         type: Schema.Types.ObjectId,
       },
     ],
@@ -32,8 +49,5 @@ const userSchema = new Schema(
     versionKey: false,
   }
 );
-
-
-
 
 export default model("User", userSchema);

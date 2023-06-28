@@ -6,7 +6,7 @@ import config from "../config";
 import Role from "../models/Role";
 
 export const singUp: RequestHandler = async (req, res) => {
-  const { username, email, password, roles } = req.body;
+  const { firstName, lastName, email, password, roles } = req.body;
 
   const userFound = User.find({ email });
 
@@ -14,7 +14,8 @@ export const singUp: RequestHandler = async (req, res) => {
   const hash = await bcrypt.hash(password, salt);
 
   const newUser = new User({
-    username,
+    firstName,
+    lastName,
     email,
     password: hash,
   });
