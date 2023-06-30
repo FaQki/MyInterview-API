@@ -83,10 +83,12 @@ POST {{api}}/api/auth/signup
 Content-Type: application/json
 
 {
-    "username": "Zeta",
+    "firstName": "Zeta",
+    "lastName": "Zeta",
+    "profilePicture": "https://s3.animalia.bio/animals/photos/full/1.25x1/capybara-sitting-sideways-18114724916jpg.webp",
     "email": "zeta@outlook.com",
     "password": "vale123",
-    "roles": ["admin","user"],
+    
     
     
 }

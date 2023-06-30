@@ -14,13 +14,12 @@ export const checkRolesExisted: Handler = (req, res, next) => {
   next();
 };
 //verificamos user y email
-export const checkDuplicateUserNameOrEmail: Handler = async (
+export const checkDuplicateUserEmail: Handler = async (
   req,
   res,
   next
 ) => {
-  const user = await User.findOne({ username: req.body.userName });
-  if (user) return res.status(400).json({ message: "The user already exits" });
+  
   const email = await User.findOne({ email: req.body.email });
   if (email)
     return res.status(400).json({ message: "The email already exits" });
