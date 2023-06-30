@@ -8,7 +8,7 @@ import Role from "../models/Role";
 export const singUp: RequestHandler = async (req, res) => {
   const { firstName, lastName, email, password, roles } = req.body;
 
-  const userFound = User.find({ email });
+  const userFound = await User.findOne({ email });
 
   const salt = await bcrypt.genSaltSync(10);
   const hash = await bcrypt.hash(password, salt);

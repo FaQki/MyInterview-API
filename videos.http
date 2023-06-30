@@ -86,7 +86,9 @@ Content-Type: application/json
     "username": "Zeta",
     "email": "zeta@outlook.com",
     "password": "vale123",
-    "roles": ["admin","user"]
+    "roles": ["admin","user"],
+    
+    
 }
 ###
 

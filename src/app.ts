@@ -8,6 +8,7 @@ import authRoute from './routes/auth.routes'
 import authRoutes from './routes/authLinkedin.routes'
 import {createRol} from './libs/initialSetup'
 
+
 const app = express();
 createRol();
 require('dotenv').config();

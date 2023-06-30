@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import { authLinkedinController } from '../controllers/authLinkedin.controller';
+import { authorizeLinkedIn, handleLinkedInCallback } from '../controllers/authLinkedin.controller';
 
 const authRoutes = Router();
 
-authRoutes.get('/signin/linkedin', authLinkedinController);
+authRoutes.post('/linkedin', authorizeLinkedIn);
+authRoutes.get('/linkedin/callback', handleLinkedInCallback);
 
 export default authRoutes;
